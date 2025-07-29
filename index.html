@@ -24,71 +24,71 @@
             --text-color: #2c3e50;
             --light-bg: #f8f9fa;
             --border-color: #dee2e6;
+            --orange: #ff6b35;
         }
         
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
+            background-color: #ffffff;
         }
         
         .navbar {
             background-color: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
         }
         
         .navbar-brand {
             font-weight: 700;
             color: var(--primary-color) !important;
+            font-size: 1.5rem;
         }
         
         .nav-link {
             font-weight: 500;
             color: var(--text-color) !important;
             transition: color 0.3s ease;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 5px;
         }
         
-        .nav-link:hover {
-            color: var(--secondary-color) !important;
+        .nav-link:hover, .nav-link.active {
+            color: var(--orange) !important;
+            background-color: rgba(255, 107, 53, 0.1);
         }
         
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
             padding: 120px 0 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
         }
         
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 4px solid var(--orange);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .section-title {
             font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 30px;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary-color);
+            font-size: 2.5rem;
+            text-align: center;
         }
         
         .card {
             border: none;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
         }
         
         .card:hover {
@@ -97,77 +97,46 @@
         }
         
         .skill-badge {
-            background: var(--secondary-color);
+            background: var(--orange);
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
             margin: 5px;
             display: inline-block;
-            font-size: 0.9em;
-        }
-        
-        .social-link {
-            color: var(--primary-color);
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        
-        .social-link:hover {
-            color: var(--secondary-color);
-        }
-        
-        .research-interest {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--secondary-color);
         }
         
         .timeline-item {
-            position: relative;
+            border-left: 3px solid var(--orange);
+            padding-left: 20px;
             margin-bottom: 30px;
+            position: relative;
         }
         
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -34px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
             border-radius: 50%;
-            background: var(--secondary-color);
+            background: var(--orange);
         }
-
-        /* Publications Section Styles */
+        
         .publication-card {
             border: 1px solid var(--border-color);
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
         .publication-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-
+        
         .publication-type {
             position: absolute;
             top: 10px;
@@ -179,13 +148,13 @@
             font-weight: bold;
             color: var(--primary-color);
         }
-
+        
         .publication-metrics {
             margin-top: 10px;
             font-size: 0.9em;
             color: var(--text-color);
         }
-
+        
         .publication-stats {
             margin-top: 30px;
             padding: 20px;
@@ -193,7 +162,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-
+        
         .stat-item {
             text-align: center;
         }
@@ -222,7 +191,7 @@
         }
         
         .btn-primary {
-            background: var(--secondary-color);
+            background: var(--orange);
             border: none;
             padding: 12px 24px;
             font-weight: 600;
@@ -231,15 +200,86 @@
         }
         
         .btn-primary:hover {
-            background: var(--primary-color);
+            background: #e55a2b;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-
+        .news-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .news-table th,
+        .news-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .news-table th {
+            background-color: var(--light-bg);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .date-column {
+            width: 120px;
+            font-weight: 600;
+            color: var(--orange);
+        }
+        
+        .content-column {
+            width: calc(100% - 120px);
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--orange);
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-content a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .about-content a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
-
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -251,19 +291,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#research">Research</a>
+                        <a class="nav-link active" href="#about">about 🍊</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#publications">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link" href="#news">News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -281,14 +315,14 @@
                     <h1 class="display-4 fw-bold mb-4">Mohammad Raihan Uddin</h1>
                     <h2 class="h4 mb-4">Master's Student in Computer Engineering</h2>
                     <p class="lead mb-4">Researcher in Machine Learning, AI, Privacy, and Security</p>
-                    <div class="mb-4">
-                        <a href="https://github.com/mohammadraihanuddin" class="social-link me-3" target="_blank">
+                    <div class="social-links">
+                        <a href="https://github.com/mohammadraihanuddin" class="social-link" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/mohammadraihanuddin" class="social-link me-3" target="_blank">
+                        <a href="https://linkedin.com/in/mohammadraihanuddin" class="social-link" target="_blank">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" class="social-link me-3" target="_blank">
+                        <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" class="social-link" target="_blank">
                             <i class="fas fa-graduation-cap"></i>
                         </a>
                         <a href="mailto:md.raihan.uddin@uah.edu" class="social-link">
@@ -307,14 +341,13 @@
     <section id="about" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="card p-4 mb-4">
-                        <p class="mb-3">I'm Mohammad Raihan Uddin, a Master's student in Computer Engineering at The University of Alabama in Huntsville and an enthusiastic researcher at the Networking, Intelligence, and Security Lab under the supervision of <a href="https://www.uah.edu/eng/faculty-staff/dinh-nguyen" target="_blank">Dr. Dinh C. Nguyen</a>.</p>
+                <div class="col-lg-10 mx-auto">
+                    <div class="about-content">
+                        <p>I am a Master's student in Computer Engineering at The University of Alabama in Huntsville and an enthusiastic researcher at the Networking, Intelligence, and Security Lab under the supervision of <a href="https://www.uah.edu/eng/faculty-staff/dinh-nguyen" target="_blank">Dr. Dinh C. Nguyen</a>.</p>
                         
-                        <p class="mb-3">I completed B.Sc in Electronics and Telecommunication Engineering from Daffodil International University in Dhaka under advisor <a href="https://faculty.daffodilvarsity.edu.bd/profile/ice/taslim.html" target="_blank">Dr. Md. Taslim Arefin</a>, and since then, I've been deeply involved in the complexities of ML, AI, privacy, and security, and Wireless Communication.</p>
+                        <p>I completed B.Sc in Electronics and Telecommunication Engineering from Daffodil International University in Dhaka under advisor <a href="https://faculty.daffodilvarsity.edu.bd/profile/ice/taslim.html" target="_blank">Dr. Md. Taslim Arefin</a>, and since then, I've been deeply involved in the complexities of ML, AI, privacy, and security, and Wireless Communication.</p>
                         
-                        <p class="mb-3">Since 2015, I have been an active IEEE member, contributing to the Bangladesh Chapter and the IEEE Region 3, Huntsville Section. My role in IEEE has allowed me to bridge communities and enhance student engagement through numerous conferences and events across Bangladesh, India, and Nepal.</p>
+                        <p>Since 2015, I have been an active IEEE member, contributing to the Bangladesh Chapter and the IEEE Region 3, Huntsville Section. My role in IEEE has allowed me to bridge communities and enhance student engagement through numerous conferences and events across Bangladesh, India, and Nepal.</p>
                         
                         <p>I am passionate about creating platforms for intellectual exchange, demonstrated by my role in organizing TEDxUA Huntsville 2025, and my leadership as the President of the UAH Bangladeshi Student Association and Secretary of the <a href="https://www.uah.edu/graduate/current-students/graduate-student-association" target="_blank">UAH Graduate Student Association.</a></p>
                     </div>
@@ -323,126 +356,11 @@
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Research Interests</h2>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-brain text-primary me-2"></i>Machine Learning & AI</h5>
-                                    <p class="card-text">Deep learning, neural networks, computer vision, and natural language processing.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-shield-alt text-primary me-2"></i>Privacy & Security</h5>
-                                    <p class="card-text">Cybersecurity, data privacy, secure communication, and threat detection.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-wifi text-primary me-2"></i>Wireless Communication</h5>
-                                    <p class="card-text">5G networks, IoT, wireless sensor networks, and communication protocols.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-network-wired text-primary me-2"></i>Networking</h5>
-                                    <p class="card-text">Network architecture, protocols, and intelligent networking solutions.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Technical Skills</h2>
-                    <div class="card p-4">
-                        <h5 class="mb-3">Programming Languages</h5>
-                        <div class="mb-4">
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">MATLAB</span>
-                            <span class="skill-badge">C/C++</span>
-                            <span class="skill-badge">Java</span>
-                        </div>
-                        
-                        <h5 class="mb-3">Machine Learning & AI</h5>
-                        <div class="mb-4">
-                            <span class="skill-badge">PyTorch</span>
-                            <span class="skill-badge">TensorFlow</span>
-                            <span class="skill-badge">Scikit-learn</span>
-                            <span class="skill-badge">NumPy</span>
-                            <span class="skill-badge">Pandas</span>
-                        </div>
-                        
-                        <h5 class="mb-3">Cloud & DevOps</h5>
-                        <div class="mb-4">
-                            <span class="skill-badge">AWS</span>
-                            <span class="skill-badge">Docker</span>
-                            <span class="skill-badge">Kubernetes</span>
-                            <span class="skill-badge">Git</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Experience & Leadership</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h5>President, UAH Bangladeshi Student Association</h5>
-                            <p class="text-muted">2024 - Present</p>
-                            <p>Leading cultural and academic initiatives for Bangladeshi students at UAH.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h5>Secretary, UAH Graduate Student Association</h5>
-                            <p class="text-muted">2024 - Present</p>
-                            <p>Supporting graduate student needs and organizing academic events.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h5>IEEE Member & Regional Contributor</h5>
-                            <p class="text-muted">2015 - Present</p>
-                            <p>Active member contributing to IEEE Bangladesh Chapter and Region 3, Huntsville Section.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h5>President, House of Youth Dialogue (HYD)</h5>
-                            <p class="text-muted">2023 - Present</p>
-                            <p>Empowering young leaders through Model United Nations conferences and leadership forums.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Publications Section -->
-    <section id="publications" class="py-5">
+    <section id="publications" class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-10 mx-auto">
                     <h2 class="section-title">Publications</h2>
                     <div class="text-center mb-4">
                         <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ&hl=en" target="_blank" class="btn btn-primary">
@@ -522,42 +440,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
-                                <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-secondary">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Blockchain-Based Security Framework for IoT Communications</h5>
-                                    <p class="card-text text-muted">IEEE International Conference on Internet of Things (IoT), 2023</p>
-                                    <p class="card-text">Decentralized security architecture using blockchain technology for secure IoT device communication.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 9
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
-                                <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-dark">Journal</span>
-                                    </div>
-                                    <h5 class="card-title">Privacy-Preserving Machine Learning in Edge Computing Environments</h5>
-                                    <p class="card-text text-muted">IEEE Transactions on Network Science and Engineering, 2023</p>
-                                    <p class="card-text">Novel approaches for implementing privacy-preserving ML algorithms in edge computing infrastructure.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 7
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="text-center mt-4">
@@ -595,26 +477,79 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <!-- News Section -->
+    <section id="news" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title">Contact Information</h2>
-                    <div class="card p-4">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-university me-2"></i>Academic Address</h5>
-                                <p>Department of ECE<br>
-                                The University of Alabama in Huntsville<br>
-                                301 Sparkman Drive<br>
-                                Huntsville, AL 35899</p>
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="section-title">News</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="news-table">
+                                <thead>
+                                    <tr>
+                                        <th class="date-column">Date</th>
+                                        <th class="content-column">News</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="date-column">Jan 15, 2025</td>
+                                        <td class="content-column">🎉 Paper accepted at IEEE International Conference on Communications (ICC) 2025! "Machine Learning-Based Intrusion Detection in 5G Networks" will be presented as an oral presentation.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date-column">Dec 10, 2024</td>
+                                        <td class="content-column">📚 Successfully defended my Master's thesis on "Privacy-Preserving Federated Learning for IoT Applications" at UAH. Thank you to my committee members for their valuable feedback!</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date-column">Nov 20, 2024</td>
+                                        <td class="content-column">🔬 Presented research on "Energy-Efficient Routing Protocols for Wireless Sensor Networks" at IEEE GLOBECOM 2024 in Washington, DC. Great discussions with fellow researchers!</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date-column">Oct 5, 2024</td>
+                                        <td class="content-column">🏆 Received the UAH Graduate Student Research Excellence Award for outstanding contributions to computer engineering research.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date-column">Sep 15, 2024</td>
+                                        <td class="content-column">📖 Paper "Deep Learning for Network Traffic Analysis and Anomaly Detection" published in Computer Networks journal. Available online now!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="lead mb-4">I'm always interested in discussing research opportunities, collaborations, and new ideas.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-envelope text-primary me-2"></i>Email
+                                    </h5>
+                                    <p class="card-text">
+                                        <a href="mailto:md.raihan.uddin@uah.edu">md.raihan.uddin@uah.edu</a>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-envelope me-2"></i>Contact</h5>
-                                <p><strong>Email:</strong> md.raihan.uddin@uah.edu<br>
-                                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mohammadraihanuddin" target="_blank">mohammadraihanuddin</a><br>
-                                <strong>GitHub:</strong> <a href="https://github.com/mohammadraihanuddin" target="_blank">mohammadraihanuddin</a></p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>Location
+                                    </h5>
+                                    <p class="card-text">University of Alabama in Huntsville<br>Huntsville, AL, USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -624,23 +559,49 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 Mohammad Raihan Uddin. All rights reserved.</p>
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Mohammad Raihan Uddin. Powered by Bootstrap. Hosted by GitHub Pages.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Smooth Scrolling -->
     <script>
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
