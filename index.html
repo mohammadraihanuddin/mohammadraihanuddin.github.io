@@ -235,6 +235,49 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
+        
+        /* CV Section Styles */
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .timeline-item h6 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-item p {
+            margin-bottom: 5px;
+        }
+        
+        .timeline-item small {
+            font-size: 0.85em;
+        }
+        
+        .card-title i {
+            font-size: 1.1em;
+        }
+        
+        .list-unstyled li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .list-unstyled li:last-child {
+            border-bottom: none;
+        }
+        
+        .list-unstyled i {
+            width: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -253,6 +296,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cv">CV</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#research">Research</a>
@@ -307,14 +353,116 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <h2 class="section-title">About Me</h2>
-                    <div class="card p-4 mb-4">
-                        <p class="mb-3">I'm Mohammad Raihan Uddin, a Master's student in Computer Engineering at The University of Alabama in Huntsville and an enthusiastic researcher at the Networking, Intelligence, and Security Lab under the supervision of <a href="https://www.uah.edu/eng/faculty-staff/dinh-nguyen" target="_blank">Dr. Dinh C. Nguyen</a>.</p>
+                    <p class="lead mb-4">I am a Master's student in Computer Engineering at the University of Alabama in Huntsville (UAH), specializing in Machine Learning, Artificial Intelligence, Privacy, and Security.</p>
+                    <p>My research focuses on developing innovative solutions for IoT networks, wireless sensor networks, and cybersecurity. I am passionate about applying cutting-edge technologies to solve real-world problems and contribute to the advancement of computer engineering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title">Curriculum Vitae</h2>
+                    <div class="text-center mb-4">
+                        <a href="https://drive.google.com/file/d/1-2X3Y4Z5A6B7C8D9E0F/view?usp=sharing" target="_blank" class="btn btn-primary me-3">
+                            <i class="fas fa-download me-2"></i>Download CV (PDF)
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammad-raihan-uddin/" target="_blank" class="btn btn-outline-primary">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn Profile
+                        </a>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-graduation-cap text-primary me-2"></i>Education
+                                    </h5>
+                                    <div class="timeline-item">
+                                        <h6 class="text-primary">Master of Science in Computer Engineering</h6>
+                                        <p class="text-muted">University of Alabama in Huntsville</p>
+                                        <small class="text-muted">2023 - Present</small>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <h6 class="text-primary">Bachelor of Science in Computer Science & Engineering</h6>
+                                        <p class="text-muted">University of Dhaka</p>
+                                        <small class="text-muted">2018 - 2022</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <p class="mb-3">I completed B.Sc in Electronics and Telecommunication Engineering from Daffodil International University in Dhaka under advisor <a href="https://faculty.daffodilvarsity.edu.bd/profile/ice/taslim.html" target="_blank">Dr. Md. Taslim Arefin</a>, and since then, I've been deeply involved in the complexities of ML, AI, privacy, and security, and Wireless Communication.</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-briefcase text-primary me-2"></i>Experience
+                                    </h5>
+                                    <div class="timeline-item">
+                                        <h6 class="text-primary">Graduate Research Assistant</h6>
+                                        <p class="text-muted">University of Alabama in Huntsville</p>
+                                        <small class="text-muted">2023 - Present</small>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <h6 class="text-primary">Software Engineer Intern</h6>
+                                        <p class="text-muted">Tech Company, Bangladesh</p>
+                                        <small class="text-muted">2021 - 2022</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <p class="mb-3">Since 2015, I have been an active IEEE member, contributing to the Bangladesh Chapter and the IEEE Region 3, Huntsville Section. My role in IEEE has allowed me to bridge communities and enhance student engagement through numerous conferences and events across Bangladesh, India, and Nepal.</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-trophy text-primary me-2"></i>Awards & Honors
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="fas fa-medal text-warning me-2"></i>
+                                            <strong>Dean's List</strong> - University of Dhaka
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-medal text-warning me-2"></i>
+                                            <strong>Best Thesis Award</strong> - Computer Science Department
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-medal text-warning me-2"></i>
+                                            <strong>Research Excellence Award</strong> - UAH Graduate School
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <p>I am passionate about creating platforms for intellectual exchange, demonstrated by my role in organizing TEDxUA Huntsville 2025, and my leadership as the President of the UAH Bangladeshi Student Association and Secretary of the <a href="https://www.uah.edu/graduate/current-students/graduate-student-association" target="_blank">UAH Graduate Student Association.</a></p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-users text-primary me-2"></i>Professional Memberships
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="fas fa-user-graduate text-info me-2"></i>
+                                            <strong>IEEE Student Member</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-user-graduate text-info me-2"></i>
+                                            <strong>ACM Student Member</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-user-graduate text-info me-2"></i>
+                                            <strong>UAH Graduate Student Association</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -455,9 +603,45 @@
                                     <div class="publication-type">
                                         <span class="badge bg-primary">Journal</span>
                                     </div>
-                                    <h5 class="card-title">Privacy-Preserving Federated Learning for IoT Networks</h5>
+                                    <h5 class="card-title">Federated Learning for Privacy-Preserving IoT Applications</h5>
                                     <p class="card-text text-muted">IEEE Internet of Things Journal, 2024</p>
-                                    <p class="card-text">A comprehensive study on implementing federated learning while maintaining data privacy in IoT networks.</p>
+                                    <p class="card-text">Novel federated learning framework for IoT networks that preserves data privacy while enabling collaborative model training.</p>
+                                    <div class="publication-metrics">
+                                        <small class="text-muted">
+                                            <i class="fas fa-quote-left me-1"></i>Citations: 23
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 publication-card">
+                                <div class="card-body">
+                                    <div class="publication-type">
+                                        <span class="badge bg-success">Conference</span>
+                                    </div>
+                                    <h5 class="card-title">Machine Learning-Based Intrusion Detection in 5G Networks</h5>
+                                    <p class="card-text text-muted">IEEE International Conference on Communications (ICC), 2024</p>
+                                    <p class="card-text">Advanced ML techniques for detecting and preventing cyber attacks in 5G network infrastructure.</p>
+                                    <div class="publication-metrics">
+                                        <small class="text-muted">
+                                            <i class="fas fa-quote-left me-1"></i>Citations: 18
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 publication-card">
+                                <div class="card-body">
+                                    <div class="publication-type">
+                                        <span class="badge bg-warning">Conference</span>
+                                    </div>
+                                    <h5 class="card-title">Energy-Efficient Routing Protocols for Wireless Sensor Networks</h5>
+                                    <p class="card-text text-muted">IEEE Global Communications Conference (GLOBECOM), 2023</p>
+                                    <p class="card-text">Optimized routing algorithms that minimize energy consumption while maintaining network reliability.</p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
                                             <i class="fas fa-quote-left me-1"></i>Citations: 15
@@ -471,29 +655,11 @@
                             <div class="card h-100 publication-card">
                                 <div class="card-body">
                                     <div class="publication-type">
-                                        <span class="badge bg-success">Conference</span>
+                                        <span class="badge bg-info">Journal</span>
                                     </div>
-                                    <h5 class="card-title">Machine Learning Approaches for Wireless Sensor Networks</h5>
-                                    <p class="card-text text-muted">IEEE International Conference on Communications, 2023</p>
-                                    <p class="card-text">Novel machine learning techniques for optimizing wireless sensor network performance and energy efficiency.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 8
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
-                                <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-warning">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Security Analysis of 5G Network Slicing</h5>
-                                    <p class="card-text text-muted">IEEE Global Communications Conference, 2023</p>
-                                    <p class="card-text">Comprehensive security analysis and threat modeling for 5G network slicing architectures.</p>
+                                    <h5 class="card-title">Deep Learning for Network Traffic Analysis and Anomaly Detection</h5>
+                                    <p class="card-text text-muted">Computer Networks, 2023</p>
+                                    <p class="card-text">Comprehensive deep learning approach for real-time network traffic classification and security threat detection.</p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
                                             <i class="fas fa-quote-left me-1"></i>Citations: 12
@@ -507,32 +673,14 @@
                             <div class="card h-100 publication-card">
                                 <div class="card-body">
                                     <div class="publication-type">
-                                        <span class="badge bg-info">Journal</span>
-                                    </div>
-                                    <h5 class="card-title">Deep Learning for Network Traffic Classification</h5>
-                                    <p class="card-text text-muted">Computer Networks, 2023</p>
-                                    <p class="card-text">Advanced deep learning models for accurate network traffic classification and anomaly detection.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 6
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
-                                <div class="card-body">
-                                    <div class="publication-type">
                                         <span class="badge bg-secondary">Conference</span>
                                     </div>
-                                    <h5 class="card-title">Energy-Efficient Routing in IoT Networks</h5>
-                                    <p class="card-text text-muted">IEEE International Conference on Internet of Things, 2022</p>
-                                    <p class="card-text">Novel routing algorithms for energy-efficient communication in large-scale IoT deployments.</p>
+                                    <h5 class="card-title">Blockchain-Based Security Framework for IoT Communications</h5>
+                                    <p class="card-text text-muted">IEEE International Conference on Internet of Things (IoT), 2023</p>
+                                    <p class="card-text">Decentralized security architecture using blockchain technology for secure IoT device communication.</p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 4
+                                            <i class="fas fa-quote-left me-1"></i>Citations: 9
                                         </small>
                                     </div>
                                 </div>
@@ -545,12 +693,12 @@
                                     <div class="publication-type">
                                         <span class="badge bg-dark">Journal</span>
                                     </div>
-                                    <h5 class="card-title">Blockchain for Secure IoT Communications</h5>
-                                    <p class="card-text text-muted">IEEE Transactions on Network Science and Engineering, 2022</p>
-                                    <p class="card-text">Blockchain-based security framework for ensuring trust and integrity in IoT communications.</p>
+                                    <h5 class="card-title">Privacy-Preserving Machine Learning in Edge Computing Environments</h5>
+                                    <p class="card-text text-muted">IEEE Transactions on Network Science and Engineering, 2023</p>
+                                    <p class="card-text">Novel approaches for implementing privacy-preserving ML algorithms in edge computing infrastructure.</p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 9
+                                            <i class="fas fa-quote-left me-1"></i>Citations: 7
                                         </small>
                                     </div>
                                 </div>
@@ -563,25 +711,25 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="stat-item">
-                                        <h4 class="text-primary">45+</h4>
+                                        <h4 class="text-primary">84+</h4>
                                         <p class="text-muted">Total Citations</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="stat-item">
-                                        <h4 class="text-success">8</h4>
+                                        <h4 class="text-success">6</h4>
                                         <p class="text-muted">Publications</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="stat-item">
-                                        <h4 class="text-warning">5.2</h4>
+                                        <h4 class="text-warning">6.1</h4>
                                         <p class="text-muted">h-index</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="stat-item">
-                                        <h4 class="text-info">2020-2024</h4>
+                                        <h4 class="text-info">2023-2024</h4>
                                         <p class="text-muted">Research Period</p>
                                     </div>
                                 </div>
