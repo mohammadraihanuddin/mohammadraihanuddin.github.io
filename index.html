@@ -7,12 +7,8 @@
     <title>Mohammad Raihan Uddin - Computer Engineering Researcher</title>
     <meta name="author" content="Mohammad Raihan Uddin">
     <meta name="description" content="Ph.D. student in Computer Engineering at Clemson University, researcher in federated learning, AI, quantum computing, privacy & security, wireless communications">
-    <meta name="keywords" content="computer engineering, machine learning, AI, security, UAH, research">
+    <meta name="keywords" content="computer engineering, machine learning, AI, security, Clemson, research">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -25,6 +21,13 @@
             --light-bg: #f8f9fa;
             --border-color: #dee2e6;
             --orange: #ff6b35;
+            --link-color: #0066cc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
@@ -32,1218 +35,496 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: #ffffff;
+            font-size: 16px;
         }
         
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary-color) !important;
-            font-size: 1.5rem;
-        }
-        
-        .nav-link {
-            font-weight: 500;
-            color: var(--text-color) !important;
-            transition: color 0.3s ease;
-            margin: 0 0.5rem;
-            padding: 0.5rem 1rem !important;
-            border-radius: 5px;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: var(--orange) !important;
-            background-color: rgba(255, 107, 53, 0.1);
-        }
-        
-        .hero-section {
-            padding: 120px 0 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        }
-        
-        .profile-img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--orange);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .section-title {
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-        
-        .card {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
-        .skill-badge {
-            background: var(--orange);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-            margin: 5px;
-            display: inline-block;
-        }
-        
-        .timeline-item {
-            border-left: 3px solid var(--orange);
-            padding-left: 20px;
-            margin-bottom: 30px;
-            position: relative;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            background: var(--orange);
-        }
-        
-        .publication-card {
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .publication-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .publication-type {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: var(--light-bg);
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-        
-        .publication-metrics {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: var(--text-color);
-        }
-        
-        .publication-stats {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: var(--light-bg);
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-item h4 {
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .publication-card .card-title {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-        
-        .publication-card .card-text {
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-        
-        .badge {
-            font-size: 0.75em;
-            font-weight: 600;
-            padding: 6px 12px;
-        }
-        
-        .btn-primary {
-            background: var(--orange);
-            border: none;
-            padding: 12px 24px;
-            font-weight: 600;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .news-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .news-table th,
-        .news-table td {
-            padding: 15px;
-            text-align: left;
+        /* Header Section */
+        .header {
+            padding: 60px 0 40px 0;
             border-bottom: 1px solid var(--border-color);
         }
         
-        .news-table th {
-            background-color: var(--light-bg);
-            font-weight: 600;
-            color: var(--primary-color);
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
         }
         
-        .date-column {
+        .profile-img {
             width: 120px;
-            font-weight: 600;
-            color: var(--orange);
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--orange);
+            flex-shrink: 0;
         }
         
-        .content-column {
-            width: calc(100% - 120px);
+        .profile-info h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .profile-info .title {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .profile-info .description {
+            font-size: 1rem;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
         
         .social-links {
-            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         
         .social-link {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: var(--orange);
-            color: white;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 50%;
-            margin: 0 10px;
-            transition: all 0.3s ease;
+            color: var(--link-color);
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         
         .social-link:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            color: white;
-        }
-        
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        
-        .about-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .about-content a {
             color: var(--orange);
+            text-decoration: underline;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--orange);
+            padding-bottom: 10px;
+        }
+        
+        .section-content {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .section-content p {
+            margin-bottom: 15px;
+        }
+        
+        .section-content a {
+            color: var(--link-color);
             text-decoration: none;
             font-weight: 500;
         }
         
-        .about-content a:hover {
+        .section-content a:hover {
+            color: var(--orange);
             text-decoration: underline;
         }
         
-        .publication-number {
-            background: var(--orange);
-            color: white;
-            padding: 4px 8px;
-            border-radius: 50%;
-            font-size: 0.8em;
-            font-weight: bold;
-            margin-right: 10px;
-            min-width: 25px;
-            text-align: center;
-            display: inline-block;
+        /* Publications */
+        .publication {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--orange);
         }
         
-        .publication-item .card-title {
+        .publication-title {
             font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
             line-height: 1.4;
         }
         
-        .publication-links {
-            flex-shrink: 0;
+        .publication-authors {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+        
+        .publication-venue {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        
+        .publication-meta {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .publication-meta .citations {
+            color: var(--orange);
+            font-weight: 500;
+        }
+        
+        /* Research Focus Tags */
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .research-tag {
+            background: var(--orange);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .profile-info h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        /* Under Review Badge */
+        .under-review {
+            background: #ffc107;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        /* Published Badge */
+        .published {
+            background: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Mohammad Raihan Uddin</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#about">About </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#teaching">Teaching</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#research">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#peer-review">Peer Review</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-4">Mohammad Raihan Uddin</h1>
-                    <h2 class="h4 mb-4">Ph.D. Student in Computer Engineering</h2>
-                    <p class="lead mb-4">Research Interests: ML, AI, and Wireless Communications</p>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-section">
+                <img src="assets/img/prof_pic1c93.jpg" alt="Mohammad Raihan Uddin" class="profile-img">
+                <div class="profile-info">
+                    <h1>Mohammad Raihan Uddin</h1>
+                    <div class="title">Ph.D. Student in Computer Engineering, Clemson University</div>
+                    <div class="description">
+                        I am currently a Ph.D. student in Computer Engineering at Clemson University in the Holcombe Department of Electrical and Computer Engineering. My doctoral research is carried out in the Intelligent Systems and Wireless Networking (IS-WiN) Laboratory, led by <a href="https://www.clemson.edu/cecas/departments/ece/people/faculty/afghah.html" target="_blank">Dr. Fatemeh Afghah</a>, focusing on advanced machine learning, artificial intelligence, and wireless communications. I am also completing my MSE in Electrical Engineering at The University of Alabama in Huntsville, expected in December 2025, also affiliated with the NIS Laboratory, advised by <a href="https://www.uah.edu/eng/departments/ece/faculty-staff/dinh-nguyen" target="_blank">Dr. Dinh C. Nguyen</a>.
+                    </div>
+                    <div class="research-tags">
+                        <span class="research-tag">Federated Learning</span>
+                        <span class="research-tag">AI</span>
+                        <span class="research-tag">Quantum Computing</span>
+                        <span class="research-tag">Privacy & Security</span>
+                        <span class="research-tag">Wireless Communications</span>
+                    </div>
                     <div class="social-links">
-                        <a href="https://github.com/mohammadraihanuddin" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/mohammadraihanuddin" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" class="social-link" target="_blank">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="mailto:mkraihan13@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <img src="assets/img/prof_pic1c93.jpg" alt="Mohammad Raihan Uddin" class="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="about-content">
-                        <p>I am currently a Ph.D. student in Computer Engineering at Clemson University in the Holcombe Department of Electrical and Computer Engineering. My doctoral research is carried out in the Intelligent Systems and Wireless Networking (IS-WiN) Laboratory, led by <a href="https://www.clemson.edu/cecas/departments/ece/people/faculty/afghah.html" target="_blank">Dr. Fatemeh Afghah</a>, focusing on advanced machine learning, artificial intelligence, and wireless communications. I am also completing my MSE in Electrical Engineering at The University of Alabama in Huntsville, expected in December 2025, also affiliated with the NIS Laboratory, advised by <a href="https://www.uah.edu/eng/departments/ece/faculty-staff/dinh-nguyen" target="_blank">Dr. Dinh C. Nguyen</a>.</p>
-                        
-                        <p>I completed B.Sc. in Electronics and Telecommunication Engineering from Daffodil International University in Dhaka under advisor <a href="https://faculty.daffodilvarsity.edu.bd/profile/ice/taslim.html" target="_blank">Dr. Md. Taslim Arefin</a>, and since then, I've been deeply involved in the complexities of ML, AI, privacy, and security, and Wireless Communication.</p>
-                        
-                        <p>Since 2015, I have been an active IEEE member, contributing to the Bangladesh Chapter and the IEEE Region 3, Huntsville Section. My role in IEEE has allowed me to bridge communities and enhance student engagement through numerous conferences and events across Bangladesh, India, and Nepal.</p>
-                        
-                        <p>I am passionate about creating platforms for intellectual exchange, demonstrated by my role as Head Organizer of TEDxUA Huntsville 2025, and my leadership as President of the UAH Bangladeshi Student Association (2024-2026) and Secretary of the <a href="https://www.uah.edu/graduate/current-students/graduate-student-association" target="_blank">UAH Graduate Student Association (2024-2025)</a>. I also serve as a peer reviewer for top-tier journals including IEEE Internet of Things Journal and ACM Computing Surveys.</p>
+                        <a href="mailto:mkraihan13@gmail.com">Email</a> / 
+                        <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank">Google Scholar</a> / 
+                        <a href="https://github.com/mohammadraihanuddin" target="_blank">Github</a> / 
+                        <a href="https://linkedin.com/in/mohammadraihanuddin" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Teaching Experience Section -->
-    <section id="teaching" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">Teaching Experience</h2>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <i class="fas fa-chalkboard-teacher text-primary me-2"></i>Graduate Teaching Assistant
-                            </h5>
-                            <p class="card-text text-muted">ECE Department, The University of Alabama in Huntsville (Jan 2024 - Dec 2025)</p>
-                            <p class="card-text">I support and mentor students by delivering course content, facilitating lab sessions, and contributing to curriculum development.</p>
-                            <div class="mt-3">
-                                <h6>Courses Supported:</h6>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul class="list-unstyled">
-                                            <li><i class="fas fa-check text-success me-2"></i>Computer Organization</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Intro to Software Engineering</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Intro to Computer Networks</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Electric Circuits & Electronics Design Lab</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="list-unstyled">
-                                            <li><i class="fas fa-check text-success me-2"></i>Electric Circuits System</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Operating System Lab</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Intro to Computer Programming for Engineering Lab</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Experience Section -->
-    <section id="research" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">Research Experience</h2>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- About Section -->
+            <div class="section">
+                <h2 class="section-title">About</h2>
+                <div class="section-content">
+                    <p>I completed B.Sc. in Electronics and Telecommunication Engineering from Daffodil International University in Dhaka under advisor <a href="https://faculty.daffodilvarsity.edu.bd/profile/ice/taslim.html" target="_blank">Dr. Md. Taslim Arefin</a>, and since then, I've been deeply involved in the complexities of ML, AI, privacy, and security, and Wireless Communication.</p>
                     
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="fas fa-microscope text-primary me-2"></i>Graduate Research Assistant
-                                    </h5>
-                                    <p class="card-text text-muted">IS-WiN Lab, Clemson University (Jan 2026 - Present)</p>
-                                    <p class="card-text">My research focuses on advanced machine learning, artificial intelligence, and wireless communications in the Intelligent Systems and Wireless Networking Laboratory.</p>
-                                    <div class="mt-3">
-                                        <h6>Research Areas:</h6>
-                                        <div class="skill-badge">Advanced ML</div>
-                                        <div class="skill-badge">AI Systems</div>
-                                        <div class="skill-badge">Wireless Communications</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="fas fa-flask text-success me-2"></i>Researcher
-                                    </h5>
-                                    <p class="card-text text-muted">Networking, Intelligence and Security Lab (NIS Lab), UAH (Jan 2024 - Dec 2025)</p>
-                                    <p class="card-text">My research focused on federated learning, artificial intelligence, quantum learning, privacy & security, and wireless communication.</p>
-                                    <div class="mt-3">
-                                        <h6>Key Projects:</h6>
-                                        <ul class="list-unstyled">
-                                            <li><i class="fas fa-check text-success me-2"></i>Quantum Federated Learning Simulator (SimQFL)</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Secure UAV Networks with Zero-Knowledge Proofs</li>
-                                            <li><i class="fas fa-check text-success me-2"></i>Attack Detection Systems for Smart Grids</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>Since 2015, I have been an active IEEE member, contributing to the Bangladesh Chapter and the IEEE Region 3, Huntsville Section. My role in IEEE has allowed me to bridge communities and enhance student engagement through numerous conferences and events across Bangladesh, India, and Nepal.</p>
                     
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="fas fa-cogs text-info me-2"></i>Research Focus Areas
-                                    </h5>
-                                    <div class="row">
-                                        <div class="col-md-3 mb-2">
-                                            <div class="skill-badge">Machine Learning</div>
-                                        </div>
-                                        <div class="col-md-3 mb-2">
-                                            <div class="skill-badge">Artificial Intelligence</div>
-                                        </div>
-                                        <div class="col-md-3 mb-2">
-                                            <div class="skill-badge">Wireless Communications</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <p>I am passionate about creating platforms for intellectual exchange, demonstrated by my role as Head Organizer of TEDxUA Huntsville 2025, and my leadership as President of the UAH Bangladeshi Student Association (2024-2026) and Secretary of the <a href="https://www.uah.edu/graduate/current-students/graduate-student-association" target="_blank">UAH Graduate Student Association (2024-2025)</a>. I also serve as a peer reviewer for top-tier journals including IEEE Internet of Things Journal and ACM Computing Surveys.</p>
+                </div>
+            </div>
+
+            <!-- Research Section -->
+            <div class="section">
+                <h2 class="section-title">Research</h2>
+                <div class="section-content">
+                    <p>Here is a collection of my research work. I am broadly interested in topics related to federated learning, artificial intelligence, quantum computing, privacy & security, and wireless communications. Currently, I am particularly excited about techniques to scale quantum federated learning and unlocking new abilities in secure distributed systems.</p>
+                </div>
+            </div>
+
+            <!-- Publications Section -->
+            <div class="section">
+                <h2 class="section-title">Publications</h2>
+                
+                <!-- Published Papers -->
+                <div class="publication">
+                    <div class="publication-title">SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization</div>
+                    <div class="publication-authors">R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen</div>
+                    <div class="publication-venue">IEEE International Conference on Quantum Computing and Engineering, 2025</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 3</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">False Data Injection Attack Detection in Edge-based Smart Metering Networks with Federated Learning</div>
+                    <div class="publication-authors"><strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen</div>
+                    <div class="publication-venue">IEEE Consumer Communications & Networking Conference (CCNC), 2025</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 4</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">From Federated Learning to Quantum Federated Learning for Space-Air-Ground Integrated Networks</div>
+                    <div class="publication-authors">V. K. Quy, N. M. Quy, T. T. Hoai, S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen, T., & P. Chatzimisios</div>
+                    <div class="publication-venue">IEEE Conference on Standards for Communications and Networking (CSCN), 2024</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 2</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Enterprise Network: Security Enhancement and Policy Management Using Next-Generation Firewall (NGFW)</div>
+                    <div class="publication-authors">M. Arefin, <strong>M. R. Uddin</strong>, N. A. Evan, M. R. Alam, et al.</div>
+                    <div class="publication-venue">Computer Networks, Big Data and IoT, Springer, 2021, pp. 753–769</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 21</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Analysis of Generic Routing Encapsulation (GRE) over IPSec VPN Tunneling in IPv6 Network</div>
+                    <div class="publication-authors"><strong>M. Uddin</strong>, N. A. Evan, M. R. Alam, M. Arefin, et al.</div>
+                    <div class="publication-venue">International Conference on Ubiquitous Communications and Network Computing, Springer, 2021, pp. 3–15</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 8</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Performance Analysis of SDN-based Intrusion Detection Model with Feature Selection Approach</div>
+                    <div class="publication-authors">S. K. Dey, <strong>M. R. Uddin</strong>, M. Rahman, et al.</div>
+                    <div class="publication-venue">Proceedings of International Joint Conference on Computational Intelligence, Springer, 2020, pp. 483–494</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 25</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Performance Optimization of Layered Signature Based Intrusion Detection System Using Snort</div>
+                    <div class="publication-authors">N. F. Firoz, M. Arefin, <strong>M. R. Uddin</strong>, et al.</div>
+                    <div class="publication-venue">International Conference on Cyber Security and Computer Science, Springer, 2020, pp. 14–27</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 12</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Artificial Neural Network Inducement for Enhancement of Cloud Computing Security</div>
+                    <div class="publication-authors"><strong>M. R. Uddin</strong>, K. M. Kabir, and M. T. Arefin</div>
+                    <div class="publication-venue">2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), IEEE, 2019, pp. 1–6</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 15</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Detection of Flow Based Anomaly in OpenFlow Controller: Machine Learning Approach in Software Defined Networking</div>
+                    <div class="publication-authors">S. K. Dey, M. M. Rahman, and <strong>M. R. Uddin</strong></div>
+                    <div class="publication-venue">2018 4th International Conference on Electrical Engineering and Information & Communication Technology (iCEEiCT), IEEE, 2018, pp. 416–421</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 18</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Enhancing the Security of Cloud Computing: Genetic Algorithm and QR Code Approach</div>
+                    <div class="publication-authors">S. K. Dey, <strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Rahman</div>
+                    <div class="publication-venue">2017 4th International Conference on Advances in Electrical Engineering (ICAEE), IEEE, 2017, pp. 181–186</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 10</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Data Security Through Image Processing by Blowfish Algorithm, Genetic Algorithm and LSB</div>
+                    <div class="publication-authors"><strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Hasan</div>
+                    <div class="publication-venue">Foundation of Computer Science, vol. 148, 2016</div>
+                    <div class="publication-meta">
+                        <span class="citations">Citations: 8</span>
+                        <span class="published">Published</span>
+                    </div>
+                </div>
+
+                <!-- Pre-prints & Under Review -->
+                <div class="publication">
+                    <div class="publication-title">Unmanned Aerial Vehicles (UAVs): A State of the Art Survey</div>
+                    <div class="publication-authors"><strong>M. R. Uddin</strong>, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE Communications Surveys & Tutorials</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Secure UAV-assisted Federated Learning: A Digital Twin-Driven Approach with Zero-Knowledge Proofs</div>
+                    <div class="publication-authors">M. B. Zami, <strong>M. R. Uddin</strong>, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE Internet of Things Journal</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Aerial Intelligent Reflecting Surface (A-IRS) for Wireless Power Transfer in 6G Networks: Security Challenges and Solutions</div>
+                    <div class="publication-authors">V. K. Quy, S. Shaon, <strong>M. R. Uddin</strong>, N. M. Quy, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE Network Magazine</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Synergy Quantum Federated Learning and Security</div>
+                    <div class="publication-authors"><strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE International Conference on Quantum Computing & Engineering (QCE)</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Quantum Federated Learning: A Comprehensive Survey</div>
+                    <div class="publication-authors"><strong>M. R. Uddin</strong>, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE Communications Surveys & Tutorials</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization</div>
+                    <div class="publication-authors">R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE Transactions on Quantum Engineering</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Quantum Federated Learning in AI-Native 6G Wireless Networks</div>
+                    <div class="publication-authors">S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen</div>
+                    <div class="publication-venue">Submitted to IEEE Network Magazine</div>
+                    <div class="publication-meta">
+                        <span class="under-review">Under Review</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">Publications</h2>
-                    <div class="text-center mb-4">
-                        <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ&hl=en" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-graduation-cap me-2"></i>View Full Google Scholar Profile
-                        </a>
-                    </div>
-                    
-                    <!-- Published Papers -->
-                    <h3 class="mb-4">Published Papers</h3>
-                    <div class="publication-list">
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">1.</span>
-                                                SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                <em>IEEE International Conference on Quantum Computing and Engineering</em>, 2025
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 3
-                                                </small>
-                                    </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Peer Review Section -->
+            <div class="section">
+                <h2 class="section-title">Peer Review Service</h2>
+                <div class="section-content">
+                    <p>Served as a peer reviewer for nearly 30 papers for the following top-tier journals:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><em>IEEE Internet of Things Journal</em></li>
+                        <li><em>ACM Computing Surveys</em></li>
+                        <li><em>IEEE Open Journal of the Communications Society</em></li>
+                        <li><em>IEEE Internet of Things Magazine</em></li>
+                        <li><em>IEEE Transactions on Green Communications and Networking</em></li>
+                        <li><em>IEEE Transactions on Network Science and Engineering</em></li>
+                        <li><em>IEEE Transactions on Cognitive Communications and Networking</em></li>
+                    </ul>
+                </div>
+            </div>
 
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">2.</span>
-                                                False Data Injection Attack Detection in Edge-based Smart Metering Networks with Federated Learning
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                <em>IEEE Consumer Communications & Networking Conference (CCNC)</em>, 2025
-                                            </p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 4
-                                        </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">3.</span>
-                                                From Federated Learning to Quantum Federated Learning for Space-Air-Ground Integrated Networks
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                V. K. Quy, N. M. Quy, T. T. Hoai, S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen, T., & P. Chatzimisios
-                                            </p>
-                                            <p class="card-text">
-                                                <em>IEEE Conference on Standards for Communications and Networking (CSCN)</em>, 2024
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 2
-                                                </small>
-                                    </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Teaching Experience Section -->
+            <div class="section">
+                <h2 class="section-title">Teaching Experience</h2>
+                <div class="section-content">
+                    <p><strong>Graduate Teaching Assistant</strong> - ECE Department, The University of Alabama in Huntsville (Jan 2024 - Dec 2025)</p>
+                    <p>I support and mentor students by delivering course content, facilitating lab sessions, and contributing to curriculum development.</p>
+                    <p><strong>Courses Supported:</strong></p>
+                    <ul style="margin-left: 20px;">
+                        <li>Computer Organization</li>
+                        <li>Intro to Software Engineering</li>
+                        <li>Intro to Computer Networks</li>
+                        <li>Electric Circuits & Electronics Design Lab</li>
+                        <li>Electric Circuits System</li>
+                        <li>Operating System Lab</li>
+                        <li>Intro to Computer Programming for Engineering Lab</li>
+                    </ul>
+                </div>
+            </div>
 
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">4.</span>
-                                                Enterprise Network: Security Enhancement and Policy Management Using Next-Generation Firewall (NGFW)
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                M. Arefin, <strong>M. R. Uddin</strong>, N. A. Evan, M. R. Alam, et al.
-                                            </p>
-                                            <p class="card-text">
-                                                <em>Computer Networks, Big Data and IoT, Springer</em>, 2021, pp. 753–769
-                                            </p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 21
-                                        </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">5.</span>
-                                                Analysis of Generic Routing Encapsulation (GRE) over IPSec VPN Tunneling in IPv6 Network
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. Uddin</strong>, N. A. Evan, M. R. Alam, M. Arefin, et al.
-                                            </p>
-                                            <p class="card-text">
-                                                <em>International Conference on Ubiquitous Communications and Network Computing, Springer</em>, 2021, pp. 3–15
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 8
-                                                </small>
-                                    </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">6.</span>
-                                                Performance Analysis of SDN-based Intrusion Detection Model with Feature Selection Approach
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                S. K. Dey, <strong>M. R. Uddin</strong>, M. Rahman, et al.
-                                            </p>
-                                            <p class="card-text">
-                                                <em>Proceedings of International Joint Conference on Computational Intelligence, Springer</em>, 2020, pp. 483–494
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 25
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">7.</span>
-                                                Performance Optimization of Layered Signature Based Intrusion Detection System Using Snort
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                N. F. Firoz, M. Arefin, <strong>M. R. Uddin</strong>, et al.
-                                            </p>
-                                            <p class="card-text">
-                                                <em>International Conference on Cyber Security and Computer Science, Springer</em>, 2020, pp. 14–27
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 12
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">8.</span>
-                                                Artificial Neural Network Inducement for Enhancement of Cloud Computing Security
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. R. Uddin</strong>, K. M. Kabir, and M. T. Arefin
-                                            </p>
-                                            <p class="card-text">
-                                                <em>2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), IEEE</em>, 2019, pp. 1–6
-                                            </p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 15
-                                        </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">9.</span>
-                                                Detection of Flow Based Anomaly in OpenFlow Controller: Machine Learning Approach in Software Defined Networking
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                S. K. Dey, M. M. Rahman, and <strong>M. R. Uddin</strong>
-                                            </p>
-                                            <p class="card-text">
-                                                <em>2018 4th International Conference on Electrical Engineering and Information & Communication Technology (iCEEiCT), IEEE</em>, 2018, pp. 416–421
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 18
-                                                </small>
-                                    </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">10.</span>
-                                                Enhancing the Security of Cloud Computing: Genetic Algorithm and QR Code Approach
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                S. K. Dey, <strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Rahman
-                                            </p>
-                                            <p class="card-text">
-                                                <em>2017 4th International Conference on Advances in Electrical Engineering (ICAEE), IEEE</em>, 2017, pp. 181–186
-                                            </p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 10
-                                        </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">11.</span>
-                                                Data Security Through Image Processing by Blowfish Algorithm, Genetic Algorithm and LSB
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Hasan
-                                            </p>
-                                            <p class="card-text">
-                                                <em>Foundation of Computer Science</em>, vol. 148, 2016
-                                            </p>
-                                            <div class="publication-metrics">
-                                                <small class="text-muted">
-                                                    <i class="fas fa-quote-left me-1"></i>Citations: 8
-                                                </small>
-                                            </div>
-                                        </div>
-                                        <div class="publication-links">
-                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                                                <i class="fas fa-external-link-alt"></i> Access
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pre-prints & Under Review -->
-                    <h3 class="mb-4 mt-5">Pre-prints & Under Review</h3>
-                    <div class="publication-list">
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[12]</span>
-                                                Unmanned Aerial Vehicles (UAVs): A State of the Art Survey
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. R. Uddin</strong>, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE Communications Surveys & Tutorials</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[13]</span>
-                                                Secure UAV-assisted Federated Learning: A Digital Twin-Driven Approach with Zero-Knowledge Proofs
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                M. B. Zami, <strong>M. R. Uddin</strong>, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE Internet of Things Journal</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[14]</span>
-                                                Aerial Intelligent Reflecting Surface (A-IRS) for Wireless Power Transfer in 6G Networks: Security Challenges and Solutions
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                V. K. Quy, S. Shaon, <strong>M. R. Uddin</strong>, N. M. Quy, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE Network Magazine</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[15]</span>
-                                                Synergy Quantum Federated Learning and Security
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE International Conference on Quantum Computing & Engineering (QCE)</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[16]</span>
-                                                Quantum Federated Learning: A Comprehensive Survey
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                <strong>M. R. Uddin</strong>, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE Communications Surveys & Tutorials</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[17]</span>
-                                                SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE Transactions on Quantum Engineering</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="publication-item mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div class="flex-grow-1">
-                                            <h5 class="card-title">
-                                                <span class="publication-number">[18]</span>
-                                                Quantum Federated Learning in AI-Native 6G Wireless Networks
-                                            </h5>
-                                            <p class="card-text text-muted">
-                                                S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen
-                                            </p>
-                                            <p class="card-text">
-                                                Submitted to <em>IEEE Network Magazine</em>
-                                            </p>
-                                        </div>
-                                        <div class="publication-links">
-                                            <span class="badge bg-warning">Under Review</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center mt-4">
-                        <div class="publication-stats">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="stat-item">
-                                        <h4 class="text-primary">130+</h4>
-                                        <p class="text-muted">Total Citations</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="stat-item">
-                                        <h4 class="text-success">11</h4>
-                                        <p class="text-muted">Publications</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="stat-item">
-                                        <h4 class="text-warning">6.1</h4>
-                                        <p class="text-muted">h-index</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="stat-item">
-                                        <h4 class="text-info">2019-2025</h4>
-                                        <p class="text-muted">Research Period</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- News Section -->
+            <div class="section">
+                <h2 class="section-title">News</h2>
+                <div class="section-content">
+                    <p><strong>Jan 2026:</strong> Started my Ph.D. in Computer Engineering at Clemson University! I'm now working in the IS-WiN Laboratory under Dr. Fatemeh Afghah, focusing on advanced machine learning, AI, and wireless communications.</p>
+                    <p><strong>Dec 2025:</strong> Excited to announce that I will be joining Clemson University as a Ph.D. student in Computer Engineering starting January 2026! I'll be working in the IS-WiN Laboratory under Dr. Fatemeh Afghah.</p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Peer Review Section -->
-    <section id="peer-review" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">Peer Review Service</h2>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <i class="fas fa-clipboard-check text-primary me-2"></i>Journal Reviewer
-                            </h5>
-                            <p class="card-text text-muted">Contributing to academic excellence through peer review</p>
-                            <p class="card-text">I serve as a peer reviewer for top-tier journals, contributing to the advancement of research in computer engineering, machine learning, and wireless communications.</p>
-                            
-                            <div class="mt-4">
-                                <h6>Journals I Review For:</h6>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul class="list-unstyled">
-                                            <li><i class="fas fa-check text-success me-2"></i><em>IEEE Internet of Things Journal</em></li>
-                                            <li><i class="fas fa-check text-success me-2"></i><em>ACM Computing Surveys</em></li>
-                                            <li><i class="fas fa-check text-success me-2"></i><em>IEEE Open Journal of the Communications Society</em></li>
-                                            <li><i class="fas fa-check text-success me-2"></i><em>IEEE Internet of Things Magazine</em></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="list-unstyled">
-                                            <li><i class="fas fa-check text-success me-2"></i><em>IEEE Transactions on Green Communications and Networking</em></li>
-                                            <li><i class="fas fa-check text-success me-2"></i><em>IEEE Transactions on Network Science and Engineering</em></li>
-                                            <li><i class="fas fa-check text-success me-2"></i><em>IEEE Transactions on Cognitive Communications and Networking</em></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-4">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="stat-item">
-                                            <h4 class="text-primary">7</h4>
-                                            <p class="text-muted">Top-Tier Journals</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="stat-item">
-                                            <h4 class="text-success">30</h4>
-                                            <p class="text-muted">Papers Reviewed</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="stat-item">
-                                            <h4 class="text-warning">Ongoing</h4>
-                                            <p class="text-muted">Service</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">News</h2>
-                    <div class="card">
-                        <div class="card-body">
-                            <table class="news-table">
-                                <thead>
-                                    <tr>
-                                        <th class="date-column">Date</th>
-                                        <th class="content-column">News</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="date-column">Jan 2026</td>
-                                        <td class="content-column">Started my Ph.D. in Computer Engineering at Clemson University! I'm now working in the IS-WiN Laboratory under Dr. Fatemeh Afghah, focusing on advanced machine learning, AI, and wireless communications.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="date-column">Dec 2025</td>
-                                        <td class="content-column">Excited to announce that I will be joining Clemson University as a Ph.D. student in Computer Engineering starting January 2026! I'll be working in the IS-WiN Laboratory under Dr. Fatemeh Afghah.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title">Contact</h2>
-                    <p class="lead mb-4">I'm always interested in discussing research opportunities, collaborations, and new ideas.</p>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="fas fa-envelope text-primary me-2"></i>Email
-                                    </h5>
-                                    <p class="card-text">
-                                        <a href="mailto:mkraihan13@gmail.com">mkraihan13@gmail.com</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>Location
-                                    </h5>
-                                    <p class="card-text">Clemson University<br>Clemson, SC, USA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-4 bg-dark text-white text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Mohammad Raihan Uddin. Powered by Bootstrap. Hosted by GitHub Pages.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    </div>
 </body>
 </html>
