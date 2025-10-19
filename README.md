@@ -2,7 +2,7 @@
 
 Ph.D. Student in Computer Engineering at Clemson University
 
-Researcher in Machine Learning, AI, Privacy, and Security, Wireless Communications
+Research Interests: Machine Learning, AI, and Wireless Communications
 
 Personal Portfolio Website: https://mohammadraihanuddin.github.io/
 
