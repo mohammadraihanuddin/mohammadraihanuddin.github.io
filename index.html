@@ -278,6 +278,28 @@
         .about-content a:hover {
             text-decoration: underline;
         }
+        
+        .publication-number {
+            background: var(--orange);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 50%;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 25px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .publication-item .card-title {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        
+        .publication-links {
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -491,200 +513,517 @@
                         </a>
                     </div>
                     
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+                    <!-- Published Papers -->
+                    <h3 class="mb-4">Published Papers</h3>
+                    <div class="publication-list">
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-success">Conference</span>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">1.</span>
+                                                SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                <em>IEEE International Conference on Quantum Computing and Engineering</em>, 2025
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 3
+                                                </small>
                                     </div>
-                                    <h5 class="card-title">SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization</h5>
-                                    <p class="card-text text-muted">IEEE International Conference on Quantum Computing and Engineering, 2025</p>
-                                    <p class="card-text">A comprehensive quantum federated learning simulator with real-time visualization capabilities for quantum machine learning research.</p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">2.</span>
+                                                False Data Injection Attack Detection in Edge-based Smart Metering Networks with Federated Learning
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                <em>IEEE Consumer Communications & Networking Conference (CCNC)</em>, 2025
+                                            </p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 3
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 4
                                         </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-success">Conference</span>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">3.</span>
+                                                From Federated Learning to Quantum Federated Learning for Space-Air-Ground Integrated Networks
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                V. K. Quy, N. M. Quy, T. T. Hoai, S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen, T., & P. Chatzimisios
+                                            </p>
+                                            <p class="card-text">
+                                                <em>IEEE Conference on Standards for Communications and Networking (CSCN)</em>, 2024
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 2
+                                                </small>
                                     </div>
-                                    <h5 class="card-title">False data injection attack detection in edge-based smart metering networks with federated learning</h5>
-                                    <p class="card-text text-muted">IEEE 22nd Consumer Communications & Networking Conference (CCNC), 2025</p>
-                                    <p class="card-text">Smart metering networks are increasingly susceptible to cyber threats, where false data injection (FDI) appears as a critical attack vector that can compromise the integrity of energy consumption data.</p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">4.</span>
+                                                Enterprise Network: Security Enhancement and Policy Management Using Next-Generation Firewall (NGFW)
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                M. Arefin, <strong>M. R. Uddin</strong>, N. A. Evan, M. R. Alam, et al.
+                                            </p>
+                                            <p class="card-text">
+                                                <em>Computer Networks, Big Data and IoT, Springer</em>, 2021, pp. 753–769
+                                            </p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 4
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 21
                                         </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-success">Conference</span>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">5.</span>
+                                                Analysis of Generic Routing Encapsulation (GRE) over IPSec VPN Tunneling in IPv6 Network
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. Uddin</strong>, N. A. Evan, M. R. Alam, M. Arefin, et al.
+                                            </p>
+                                            <p class="card-text">
+                                                <em>International Conference on Ubiquitous Communications and Network Computing, Springer</em>, 2021, pp. 3–15
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 8
+                                                </small>
                                     </div>
-                                    <h5 class="card-title">From federated learning to quantum federated learning for space-air-ground integrated networks</h5>
-                                    <p class="card-text text-muted">IEEE Conference on Standards for Communications and Networking (CSCN), 2024</p>
-                                    <p class="card-text">6G wireless networks are expected to provide seamless and data-based connections that cover space-air-ground and underwater networks.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 2
-                                        </small>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-primary">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Enterprise network: Security enhancement and policy management using next-generation firewall (NGFW)</h5>
-                                    <p class="card-text text-muted">Computer Networks, Big Data and IoT: Proceedings of ICCBI, 2020</p>
-                                    <p class="card-text">Network security is considered as a major task in network architecture. A network administrator had to focus, and it is defined and demonstrated.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 21
-                                        </small>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">6.</span>
+                                                Performance Analysis of SDN-based Intrusion Detection Model with Feature Selection Approach
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                S. K. Dey, <strong>M. R. Uddin</strong>, M. Rahman, et al.
+                                            </p>
+                                            <p class="card-text">
+                                                <em>Proceedings of International Joint Conference on Computational Intelligence, Springer</em>, 2020, pp. 483–494
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 25
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-info">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Performance analysis of SDN-based intrusion detection model with feature selection approach</h5>
-                                    <p class="card-text text-muted">International Joint Conference on Computational Intelligence: IJCCI, 2018</p>
-                                    <p class="card-text">Generally, there are two types of approaches available for the detection of networks attacks, namely signature based and anomaly based.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 25
-                                        </small>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">7.</span>
+                                                Performance Optimization of Layered Signature Based Intrusion Detection System Using Snort
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                N. F. Firoz, M. Arefin, <strong>M. R. Uddin</strong>, et al.
+                                            </p>
+                                            <p class="card-text">
+                                                <em>International Conference on Cyber Security and Computer Science, Springer</em>, 2020, pp. 14–27
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 12
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-primary">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Analysis of generic routing encapsulation (GRE) over IPSec VPN tunneling in IPv6 network</h5>
-                                    <p class="card-text text-muted">International Conference on Ubiquitous Communications and Network Computing (Springer), 2021</p>
-                                    <p class="card-text">Comprehensive analysis of GRE over IPSec VPN tunneling mechanisms in IPv6 network environments.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 8
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
-                                <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-warning">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Performance optimization of layered signature-based intrusion detection system using Snort</h5>
-                                    <p class="card-text text-muted">International Conference on Cyber Security and Computer Science (Springer), 2020</p>
-                                    <p class="card-text">Optimization techniques for layered signature-based intrusion detection systems using Snort framework.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 12
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
-                                <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-success">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Artificial neural network inducement for enhancement of cloud computing security</h5>
-                                    <p class="card-text text-muted">International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), 2019</p>
-                                    <p class="card-text">Application of artificial neural networks for enhancing security mechanisms in cloud computing environments.</p>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">8.</span>
+                                                Artificial Neural Network Inducement for Enhancement of Cloud Computing Security
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. R. Uddin</strong>, K. M. Kabir, and M. T. Arefin
+                                            </p>
+                                            <p class="card-text">
+                                                <em>2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), IEEE</em>, 2019, pp. 1–6
+                                            </p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
                                             <i class="fas fa-quote-left me-1"></i>Citations: 15
                                         </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-info">Conference</span>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">9.</span>
+                                                Detection of Flow Based Anomaly in OpenFlow Controller: Machine Learning Approach in Software Defined Networking
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                S. K. Dey, M. M. Rahman, and <strong>M. R. Uddin</strong>
+                                            </p>
+                                            <p class="card-text">
+                                                <em>2018 4th International Conference on Electrical Engineering and Information & Communication Technology (iCEEiCT), IEEE</em>, 2018, pp. 416–421
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 18
+                                                </small>
                                     </div>
-                                    <h5 class="card-title">Detection of flow-based anomaly in OpenFlow controller: Machine learning approach in software-defined networking</h5>
-                                    <p class="card-text text-muted">International Conference on Electrical Engineering and Information & Communication Technology (iCEEiCT), 2018</p>
-                                    <p class="card-text">Machine learning approaches for detecting flow-based anomalies in OpenFlow controllers within software-defined networking.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 18
-                                        </small>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-primary">Conference</span>
-                                    </div>
-                                    <h5 class="card-title">Enhancing the security of cloud computing: Genetic algorithm and QR code approach</h5>
-                                    <p class="card-text text-muted">International Conference on Advances in Electrical Engineering (ICAEE), 2017</p>
-                                    <p class="card-text">Novel approach combining genetic algorithms and QR codes for enhancing cloud computing security.</p>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">10.</span>
+                                                Enhancing the Security of Cloud Computing: Genetic Algorithm and QR Code Approach
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                S. K. Dey, <strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Rahman
+                                            </p>
+                                            <p class="card-text">
+                                                <em>2017 4th International Conference on Advances in Electrical Engineering (ICAEE), IEEE</em>, 2017, pp. 181–186
+                                            </p>
                                     <div class="publication-metrics">
                                         <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 10
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 10
                                         </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-md-6 mb-4">
-                            <div class="card h-100 publication-card">
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="publication-type">
-                                        <span class="badge bg-warning">Journal</span>
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">11.</span>
+                                                Data Security Through Image Processing by Blowfish Algorithm, Genetic Algorithm and LSB
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Hasan
+                                            </p>
+                                            <p class="card-text">
+                                                <em>Foundation of Computer Science</em>, vol. 148, 2016
+                                            </p>
+                                            <div class="publication-metrics">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-quote-left me-1"></i>Citations: 8
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="publication-links">
+                                            <a href="#" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                                                <i class="fas fa-external-link-alt"></i> Access
+                                            </a>
+                                        </div>
                                     </div>
-                                    <h5 class="card-title">Data security through image processing by Blowfish algorithm, genetic algorithm, and LSB</h5>
-                                    <p class="card-text text-muted">Foundation of Computer Science, 2016</p>
-                                    <p class="card-text">Comprehensive data security framework using image processing techniques with Blowfish algorithm, genetic algorithm, and LSB steganography.</p>
-                                    <div class="publication-metrics">
-                                        <small class="text-muted">
-                                            <i class="fas fa-quote-left me-1"></i>Citations: 8
-                                        </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pre-prints & Under Review -->
+                    <h3 class="mb-4 mt-5">Pre-prints & Under Review</h3>
+                    <div class="publication-list">
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[12]</span>
+                                                Unmanned Aerial Vehicles (UAVs): A State of the Art Survey
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. R. Uddin</strong>, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE Communications Surveys & Tutorials</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[13]</span>
+                                                Secure UAV-assisted Federated Learning: A Digital Twin-Driven Approach with Zero-Knowledge Proofs
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                M. B. Zami, <strong>M. R. Uddin</strong>, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE Internet of Things Journal</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[14]</span>
+                                                Aerial Intelligent Reflecting Surface (A-IRS) for Wireless Power Transfer in 6G Networks: Security Challenges and Solutions
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                V. K. Quy, S. Shaon, <strong>M. R. Uddin</strong>, N. M. Quy, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE Network Magazine</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[15]</span>
+                                                Synergy Quantum Federated Learning and Security
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE International Conference on Quantum Computing & Engineering (QCE)</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[16]</span>
+                                                Quantum Federated Learning: A Comprehensive Survey
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                <strong>M. R. Uddin</strong>, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE Communications Surveys & Tutorials</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[17]</span>
+                                                SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE Transactions on Quantum Engineering</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title">
+                                                <span class="publication-number">[18]</span>
+                                                Quantum Federated Learning in AI-Native 6G Wireless Networks
+                                            </h5>
+                                            <p class="card-text text-muted">
+                                                S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen
+                                            </p>
+                                            <p class="card-text">
+                                                Submitted to <em>IEEE Network Magazine</em>
+                                            </p>
+                                        </div>
+                                        <div class="publication-links">
+                                            <span class="badge bg-warning">Under Review</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
