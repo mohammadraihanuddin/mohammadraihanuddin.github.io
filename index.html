@@ -3,268 +3,286 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mohammad Raihan Uddin | About</title>
+    <title>Mohammad Raihan Uddin</title>
     <meta name="author" content="Mohammad Raihan Uddin">
-    <meta name="description" content="Ph.D. student at Clemson University. Research in machine learning, federated learning, privacy-preserving AI, and wireless communications.">
-    <meta name="keywords" content="Mohammad Raihan Uddin, Clemson University, machine learning, federated learning, wireless communication">
+    <meta name="description" content="Ph.D. student at Clemson University. Research in machine learning, federated learning, and wireless communications.">
     <meta property="og:title" content="Mohammad Raihan Uddin">
-    <meta property="og:description" content="About, publications, teaching, and service.">
-    <meta property="og:type" content="website">
     <meta property="og:url" content="https://mohammadraihanuddin.github.io/">
     <meta property="og:image" content="https://mohammadraihanuddin.github.io/assets/img/prof_pic1c93.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --text: #222;
-            --muted: #666;
-            --link: #0056b3;
-            --border: #e4e4e4;
-            --bg-soft: #fafafa;
+            --text: #1a1a1a;
+            --muted: #555;
+            --link: #0645ad;
+            --rule: #ccc;
         }
         * { box-sizing: border-box; }
         body {
             margin: 0;
-            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            padding: 48px 20px 64px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 17px;
+            line-height: 1.6;
             color: var(--text);
-            line-height: 1.65;
-            font-size: 15px;
+            background: #fff;
         }
-        a { color: var(--link); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .container { max-width: 980px; margin: 0 auto; padding: 0 18px 42px; }
+        a { color: var(--link); }
+        a:hover { text-decoration: none; }
+        .wrap { max-width: 720px; margin: 0 auto; }
 
-        .top-nav {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            align-items: center;
-            margin: 0;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.92rem;
-        }
-        .top-nav .brand { font-weight: 700; margin-right: 4px; }
-
-        .about {
-            display: grid;
-            grid-template-columns: 230px 1fr;
-            gap: 28px;
-            margin-top: 24px;
-        }
-        .profile-img {
-            width: 100%;
-            max-width: 230px;
-            border-radius: 6px;
-            object-fit: cover;
-            border: 1px solid var(--border);
-        }
         h1 {
-            margin: 0;
-            font-size: clamp(1.8rem, 3.2vw, 2.3rem);
-            line-height: 1.2;
-        }
-        .subtitle {
-            margin: 7px 0 0;
-            color: var(--muted);
-            font-weight: 600;
-        }
-        .affiliation {
-            margin-top: 2px;
-            color: #333;
-            font-weight: 500;
-        }
-        .quick-links {
-            margin-top: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-            font-size: 0.93rem;
-        }
-        .quick-links span { color: var(--muted); }
-        .about p {
-            margin: 10px 0 0;
-        }
-
-        section {
-            margin-top: 28px;
+            margin: 0 0 20px;
+            font-size: 2rem;
+            font-weight: normal;
+            letter-spacing: -0.02em;
         }
         h2 {
-            margin: 0 0 10px;
-            font-size: 1.3rem;
+            margin: 36px 0 14px;
+            font-size: 1.25rem;
+            font-weight: normal;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 6px;
         }
-        h3 {
-            margin: 14px 0 8px;
-            font-size: 1rem;
+        p { margin: 0 0 14px; }
+
+        .header {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
         }
-        ul, ol {
-            margin: 10px 0 0 20px;
-            padding: 0;
+        .header img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
         }
-        li { margin-top: 6px; }
-        .pub-subtitle {
-            margin-top: 16px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        ol.pub-list {
-            margin: 10px 0 0 24px;
-            padding: 0;
-        }
-        .pub-item {
-            margin-top: 11px;
-            padding-left: 4px;
-        }
-        .publication-title { font-weight: 600; }
-        .publication-authors { margin-top: 2px; color: #333; }
-        .publication-meta { color: var(--muted); margin-top: 2px; }
-        .publication-abstract {
-            margin-top: 4px;
-            color: #444;
-            font-size: 0.94rem;
-        }
-        .pub-links {
-            margin-top: 4px;
-            font-size: 0.92rem;
-        }
-        .pub-links span { color: var(--muted); }
-        .note-box {
-            border: 1px solid var(--border);
-            background: var(--bg-soft);
-            padding: 12px;
-            border-radius: 6px;
-            margin-top: 10px;
-        }
-        .footer {
-            margin-top: 34px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
+        .header-meta { flex: 1; min-width: 0; }
+        .role { color: var(--muted); margin-bottom: 10px; }
+        .links { font-size: 0.95rem; line-height: 1.8; }
+
+        .papers-intro {
+            font-size: 0.95rem;
             color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .year-label {
+            margin: 28px 0 10px;
+            font-size: 0.82rem;
+            font-weight: normal;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        ol.papers {
+            margin: 0;
+            padding: 0 0 0 1.4em;
+            list-style: decimal;
+        }
+        ol.papers > li {
+            margin-bottom: 22px;
+            padding-left: 6px;
+        }
+        ol.papers > li::marker {
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-size: 0.9rem;
         }
+        .paper-title {
+            display: block;
+            font-weight: bold;
+            line-height: 1.35;
+        }
+        .paper-authors {
+            display: block;
+            margin-top: 3px;
+            font-size: 0.97rem;
+        }
+        .paper-venue {
+            display: block;
+            margin-top: 3px;
+            font-style: italic;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+        .paper-links {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.88rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        .paper-links a + a::before {
+            content: " · ";
+            color: var(--muted);
+            text-decoration: none;
+        }
 
-        @media (max-width: 820px) {
-            .about { grid-template-columns: 1fr; }
-            .profile-img { max-width: 220px; }
+        .footer {
+            margin-top: 48px;
+            padding-top: 16px;
+            border-top: 1px solid var(--rule);
+            font-size: 0.88rem;
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        @media (max-width: 560px) {
+            .header { flex-direction: column; }
+            .header img { width: 140px; height: 140px; }
         }
     </style>
 </head>
 <body>
-    <main class="container">
-        <nav class="top-nav">
-            <span class="brand">Mohammad Raihan Uddin</span>
-            <a href="#about">About</a>
-            <a href="#publications">Publications</a>
-            <a href="#awards">Awards</a>
-            <a href="#talks">Press & Talks</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#service">Service</a>
-            <a href="assets/pdf/MohammadRaihanUddin_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-            <a href="#joining">Joining Us</a>
-        </nav>
+    <div class="wrap">
+        <h1>Mohammad Raihan Uddin</h1>
 
-        <section class="about" id="about">
-            <img src="assets/img/prof_pic1c93.jpg" alt="Portrait of Mohammad Raihan Uddin" class="profile-img">
-            <div>
-                <h1>Mohammad Raihan Uddin</h1>
-                <p class="subtitle">Ph.D. Student, Clemson University</p>
-                <p class="affiliation">IS-WiN Laboratory, Holcombe Department of Electrical and Computer Engineering</p>
-                <div class="quick-links">
-                    <a href="mailto:mkraihan13@gmail.com">Email</a><span>|</span>
-                    <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a><span>|</span>
-                    <a href="https://github.com/mohammadraihanuddin" target="_blank" rel="noopener noreferrer">GitHub</a><span>|</span>
+        <div class="header">
+            <img src="assets/img/prof_pic1c93.jpg" alt="Mohammad Raihan Uddin">
+            <div class="header-meta">
+                <p class="role">
+                    Ph.D. Student in Computer Engineering<br>
+                    Clemson University &middot; IS-WiN Laboratory
+                </p>
+                <div class="links">
+                    <a href="mailto:mkraihan13@gmail.com">mkraihan13@gmail.com</a><br>
+                    <a href="assets/pdf/MohammadRaihanUddin_CV.pdf">Curriculum Vitae</a><br>
+                    <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a><br>
+                    <a href="https://github.com/mohammadraihanuddin" target="_blank" rel="noopener noreferrer">GitHub</a><br>
                     <a href="https://linkedin.com/in/mohammadraihanuddin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
-                <p>
-                    I am a Ph.D. student at Clemson University (expected Dec 2028) and a member of the
-                    <a href="https://sites.google.com/g.clemson.edu/is-win-lab/home" target="_blank" rel="noopener noreferrer">IS-WiN Laboratory</a>,
-                    advised by
-                    <a href="https://www.clemson.edu/cecas/departments/ece/faculty_staff/faculty/fafghah.html" target="_blank" rel="noopener noreferrer">Dr. Fatemeh Afghah</a>.
-                    My research focuses on machine learning, federated learning, trustworthy AI, and intelligent wireless networks.
-                </p>
-                <p>
-                    I previously worked in the Networking, Intelligence and Security (NIS) Lab at The University of Alabama in Huntsville, where I completed my MSE in Electrical Engineering (expected Dec 2025) under
-                    <a href="https://www.uah.edu/eng/departments/ece/faculty-staff/dinh-nguyen" target="_blank" rel="noopener noreferrer">Dr. Dinh C. Nguyen</a>.
-                </p>
-                <div class="note-box">
-                    <strong>Current Research Focus:</strong> I work on federated and quantum federated learning, LLM-assisted reasoning for ORAN/6G systems, and secure learning methods for wireless infrastructures.
-                </div>
             </div>
-        </section>
+        </div>
 
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            <p>
-                Full publication list is available on
-                <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
-            </p>
+        <p>
+            I am a Ph.D. student in Computer Engineering at Clemson University, working in the
+            <a href="https://sites.google.com/g.clemson.edu/is-win-lab/home" target="_blank" rel="noopener noreferrer">IS-WiN Laboratory</a>
+            with
+            <a href="https://www.clemson.edu/cecas/departments/ece/faculty_staff/faculty/fafghah.html" target="_blank" rel="noopener noreferrer">Dr. Fatemeh Afghah</a>.
+            My research focuses on machine learning and AI for wireless communication systems, including federated learning, privacy-preserving AI, and LLM-assisted intelligence for ORAN and 6G networks.
+        </p>
+        <p>
+            I completed my MSE in Electrical Engineering at The University of Alabama in Huntsville, where I worked with
+            <a href="https://www.uah.edu/eng/departments/ece/faculty-staff/dinh-nguyen" target="_blank" rel="noopener noreferrer">Dr. Dinh C. Nguyen</a>
+            in the NIS Lab on federated learning, quantum computing, and secure distributed systems.
+        </p>
 
-            <p class="pub-subtitle">Published</p>
-            <ol class="pub-list">
-                <li class="pub-item">
-                    <div class="publication-title">SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization</div>
-                    <div class="publication-authors">R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen</div>
-                    <div class="publication-meta">IEEE International Conference on Quantum Computing and Engineering (QCE), 2025</div>
-                    <div class="pub-links"><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></div>
-                </li>
-                <li class="pub-item">
-                    <div class="publication-title">False Data Injection Attack Detection in Edge-based Smart Metering Networks with Federated Learning</div>
-                    <div class="publication-authors"><strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen</div>
-                    <div class="publication-meta">IEEE Consumer Communications &amp; Networking Conference (CCNC), 2025</div>
-                    <div class="pub-links"><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></div>
-                </li>
-                <li class="pub-item">
-                    <div class="publication-title">From Federated Learning to Quantum Federated Learning for Space-Air-Ground Integrated Networks</div>
-                    <div class="publication-authors">V. K. Quy, N. M. Quy, T. T. Hoai, S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen, T., &amp; P. Chatzimisios</div>
-                    <div class="publication-meta">IEEE Conference on Standards for Communications and Networking (CSCN), 2024</div>
-                    <div class="pub-links"><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></div>
-                </li>
-            </ol>
-        </section>
+        <h2>Teaching</h2>
+        <p>
+            Graduate Teaching Assistant, ECE Department, UAH (Jan 2024 &ndash; Dec 2025). Supported courses in computer networks, software engineering, operating systems, and circuits labs.
+        </p>
 
-        <section id="awards">
-            <h2>Awards</h2>
-            <ul>
-                <li>Graduate Teaching Assistant recognition for instructional support at UAH</li>
-                <li>Active IEEE member and contributor to technical communities since 2015</li>
-            </ul>
-        </section>
+        <h2>Service</h2>
+        <p>
+            Peer reviewer for IEEE Internet of Things Journal, ACM Computing Surveys, IEEE Open Journal of the Communications Society, and other IEEE journals. Active IEEE member since 2015.
+        </p>
 
-        <section id="talks">
-            <h2>Press &amp; Talks</h2>
-            <ul>
-                <li>Invited presentations on federated learning, quantum learning, and secure AI for wireless systems</li>
-                <li>Technical talks and workshops through IEEE and university research communities</li>
-            </ul>
-        </section>
+        <h2>Papers</h2>
+        <p class="papers-intro">
+            Published work in reverse chronological order.
+            Also see <a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
+        </p>
 
-        <section id="teaching">
-            <h2>Teaching</h2>
-            <p>
-                Graduate Teaching Assistant (ECE) at The University of Alabama in Huntsville, supporting courses in computer networks, software engineering, operating systems, and circuits labs.
-            </p>
-        </section>
+        <p class="year-label">2025</p>
+        <ol class="papers">
+            <li>
+                <span class="paper-title">SimQFL: A Quantum Federated Learning Simulator with Real-Time Visualization</span>
+                <span class="paper-authors">R. Rahman, A. Pokharel, <strong>M. R. Uddin</strong>, D. C. Nguyen</span>
+                <span class="paper-venue">IEEE International Conference on Quantum Computing and Engineering (QCE)</span>
+                <span class="paper-links"><a href="assets/pdf/publications/SimQFL_A_Quantum_Federated_Learning_Simulator_with_Real-Time_Visualization.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+            <li>
+                <span class="paper-title">False Data Injection Attack Detection in Edge-based Smart Metering Networks with Federated Learning</span>
+                <span class="paper-authors"><strong>M. R. Uddin</strong>, R. Rahman, D. C. Nguyen</span>
+                <span class="paper-venue">IEEE Consumer Communications &amp; Networking Conference (CCNC)</span>
+                <span class="paper-links"><a href="assets/pdf/publications/False_Data_Injection_Attack_Detection_in_Edge-Based_Smart_Metering_Networks_with_Federated_Learning.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
 
-        <section id="service">
-            <h2>Service</h2>
-            <p>
-                Reviewer for venues including IEEE Internet of Things Journal, ACM Computing Surveys, and other IEEE journals.
-            </p>
-        </section>
+        <p class="year-label">2024</p>
+        <ol class="papers" start="3">
+            <li>
+                <span class="paper-title">From Federated Learning to Quantum Federated Learning for Space-Air-Ground Integrated Networks</span>
+                <span class="paper-authors">V. K. Quy, N. M. Quy, T. T. Hoai, S. Shaon, <strong>M. R. Uddin</strong>, D. C. Nguyen, T., &amp; P. Chatzimisios</span>
+                <span class="paper-venue">IEEE Conference on Standards for Communications and Networking (CSCN)</span>
+                <span class="paper-links"><a href="assets/pdf/publications/From_Federated_Learning_to_Quantum_Federated_Learning_for_Space-Air-Ground_Integrated_Networks.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
 
-        <section id="joining">
-            <h2>Joining Us</h2>
-            <p>
-                If you are interested in collaborating on ML, federated learning, and wireless AI projects, feel free to email me with your CV and brief research interests.
-            </p>
-        </section>
+        <p class="year-label">2021</p>
+        <ol class="papers" start="4">
+            <li>
+                <span class="paper-title">Enterprise Network: Security Enhancement and Policy Management Using Next-Generation Firewall (NGFW)</span>
+                <span class="paper-authors">M. Arefin, <strong>M. R. Uddin</strong>, N. A. Evan, M. R. Alam, et al.</span>
+                <span class="paper-venue">Computer Networks, Big Data and IoT, Springer, pp. 753&ndash;769</span>
+                <span class="paper-links"><a href="assets/pdf/publications/ENTERPRISENETWORKSECURITYENHANCEMENTANDPOLICYMANAGEMENTUSINGNEXT-GENERATIONFIREWALLNGFW.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+            <li>
+                <span class="paper-title">Analysis of Generic Routing Encapsulation (GRE) over IPSec VPN Tunneling in IPv6 Network</span>
+                <span class="paper-authors"><strong>M. Uddin</strong>, N. A. Evan, M. R. Alam, M. Arefin, et al.</span>
+                <span class="paper-venue">International Conference on Ubiquitous Communications and Network Computing, Springer, pp. 3&ndash;15</span>
+                <span class="paper-links"><a href="assets/pdf/publications/GREoverIPSec.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
 
-        <footer class="footer">
-            Last updated: April 2026 | <a href="assets/pdf/MohammadRaihanUddin_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
-        </footer>
-    </main>
+        <p class="year-label">2020</p>
+        <ol class="papers" start="6">
+            <li>
+                <span class="paper-title">Performance Analysis of SDN-based Intrusion Detection Model with Feature Selection Approach</span>
+                <span class="paper-authors">S. K. Dey, <strong>M. R. Uddin</strong>, M. Rahman, et al.</span>
+                <span class="paper-venue">International Joint Conference on Computational Intelligence, Springer, pp. 483&ndash;494</span>
+                <span class="paper-links"><a href="assets/pdf/publications/7.PerformanceAnalysisofSDN-Based.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+            <li>
+                <span class="paper-title">Performance Optimization of Layered Signature Based Intrusion Detection System Using Snort</span>
+                <span class="paper-authors">N. F. Firoz, M. Arefin, <strong>M. R. Uddin</strong>, et al.</span>
+                <span class="paper-venue">International Conference on Cyber Security and Computer Science, Springer, pp. 14&ndash;27</span>
+                <span class="paper-links"><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
+
+        <p class="year-label">2019</p>
+        <ol class="papers" start="8">
+            <li>
+                <span class="paper-title">Artificial Neural Network Inducement for Enhancement of Cloud Computing Security</span>
+                <span class="paper-authors"><strong>M. R. Uddin</strong>, K. M. Kabir, and M. T. Arefin</span>
+                <span class="paper-venue">1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), IEEE, pp. 1&ndash;6</span>
+                <span class="paper-links"><a href="assets/pdf/publications/Artificial_Neural_Network_Inducement_for_Enhancement_of_Cloud_Computing_Security.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
+
+        <p class="year-label">2018</p>
+        <ol class="papers" start="9">
+            <li>
+                <span class="paper-title">Detection of Flow Based Anomaly in OpenFlow Controller: Machine Learning Approach in Software Defined Networking</span>
+                <span class="paper-authors">S. K. Dey, M. M. Rahman, and <strong>M. R. Uddin</strong></span>
+                <span class="paper-venue">4th International Conference on Electrical Engineering and Information &amp; Communication Technology (iCEEiCT), IEEE, pp. 416&ndash;421</span>
+                <span class="paper-links"><a href="assets/pdf/publications/Detection_of_Flow_Based_Anomaly_in_OpenFlow_Controller_Machine_Learning_Approach_in_Software_Defined_Networking.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
+
+        <p class="year-label">2017</p>
+        <ol class="papers" start="10">
+            <li>
+                <span class="paper-title">Enhancing the Security of Cloud Computing: Genetic Algorithm and QR Code Approach</span>
+                <span class="paper-authors">S. K. Dey, <strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Rahman</span>
+                <span class="paper-venue">4th International Conference on Advances in Electrical Engineering (ICAEE), IEEE, pp. 181&ndash;186</span>
+                <span class="paper-links"><a href="assets/pdf/publications/Enhancing_the_security_of_cloud_computing_Genetic_algorithm_and_QR_code_approach.pdf">PDF</a><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
+
+        <p class="year-label">2016</p>
+        <ol class="papers" start="11">
+            <li>
+                <span class="paper-title">Data Security Through Image Processing by Blowfish Algorithm, Genetic Algorithm and LSB</span>
+                <span class="paper-authors"><strong>M. R. Uddin</strong>, K. M. Kabir, and M. M. Hasan</span>
+                <span class="paper-venue">Foundation of Computer Science, vol. 148</span>
+                <span class="paper-links"><a href="https://scholar.google.com/citations?user=37pRodoAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a></span>
+            </li>
+        </ol>
+
+        <p class="footer">Last updated: April 2026</p>
+    </div>
 </body>
 </html>
