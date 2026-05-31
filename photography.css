@@ -40,34 +40,52 @@ body.photo-page a:hover {
 }
 
 .photo-mosaic {
-  column-count: 3;
-  column-gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 8px;
+  grid-auto-flow: dense;
+  gap: 6px;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 6px 56px;
+  padding: 0 8px 56px;
 }
 
 .photo-mosaic a {
   display: block;
-  break-inside: avoid;
-  margin-bottom: 6px;
   overflow: hidden;
   background: #f5f5f5;
   line-height: 0;
+  position: relative;
 }
 
 .photo-mosaic img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border: none;
   border-radius: 0;
+  object-fit: cover;
   transition: opacity 0.35s ease, transform 0.45s ease;
+}
+
+/* Portrait: one column width, height from aspect ratio */
+.photo-mosaic a.is-portrait {
+  grid-column: span 3;
+}
+
+/* Landscape: wider tile */
+.photo-mosaic a.is-landscape {
+  grid-column: span 6;
+}
+
+/* Nearly square */
+.photo-mosaic a.is-square {
+  grid-column: span 4;
 }
 
 .photo-mosaic a:hover img {
   opacity: 0.9;
-  transform: scale(1.015);
+  transform: scale(1.02);
   cursor: zoom-in;
 }
 
@@ -99,21 +117,39 @@ body.photo-page a:hover {
 
 @media (max-width: 900px) {
   .photo-mosaic {
-    column-count: 2;
-    column-gap: 5px;
-    padding: 0 5px 40px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    padding: 0 6px 40px;
   }
 
-  .photo-mosaic a {
-    margin-bottom: 5px;
+  .photo-mosaic a.is-portrait {
+    grid-column: span 2;
+  }
+
+  .photo-mosaic a.is-landscape {
+    grid-column: span 4;
+  }
+
+  .photo-mosaic a.is-square {
+    grid-column: span 3;
   }
 }
 
 @media (max-width: 540px) {
   .photo-mosaic {
-    column-count: 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 6px;
     max-width: 520px;
     padding: 0 8px 32px;
+  }
+
+  .photo-mosaic a.is-portrait,
+  .photo-mosaic a.is-square {
+    grid-column: span 1;
+  }
+
+  .photo-mosaic a.is-landscape {
+    grid-column: span 2;
   }
 
   .photo-header {
@@ -123,7 +159,6 @@ body.photo-page a:hover {
 
 @media (min-width: 1400px) {
   .photo-mosaic {
-    column-count: 4;
     max-width: 1680px;
   }
 }
