@@ -118,47 +118,30 @@
       var mosaic = document.getElementById('photo-mosaic');
       var lightbox = document.getElementById('photo-lightbox');
       var lightboxImg = document.getElementById('photo-lightbox-img');
-      var ROW = 8;
 
-      function orientClass(type) {
-        if (type === 'landscape') return 'is-landscape';
-        if (type === 'square') return 'is-square';
-        return 'is-portrait';
+      function classify(w, h) {
+        var ratio = w / h;
+        if (ratio > 1.05) return 'landscape';
+        if (ratio < 0.95) return 'portrait';
+        return 'square';
       }
 
-      function rowSpan(link, img) {
+      function applyOrientation(link, img) {
         var w = img.naturalWidth;
         var h = img.naturalHeight;
         if (!w || !h) return;
-        var type = link.getAttribute('data-orient') || 'portrait';
-        if (!link.getAttribute('data-orient')) {
-          var ratio = w / h;
-          if (ratio > 1.08) type = 'landscape';
-          else if (ratio < 0.92) type = 'portrait';
-          else type = 'square';
-        }
-        link.className = orientClass(type);
-        var colSpan = type === 'landscape' ? 6 : type === 'square' ? 4 : 3;
-        if (window.innerWidth <= 540) {
-          colSpan = type === 'landscape' ? 2 : 1;
-        } else if (window.innerWidth <= 900) {
-          colSpan = type === 'landscape' ? 4 : type === 'square' ? 3 : 2;
-        }
-        var width = mosaic.clientWidth;
-        var colWidth = (width - 6 * 5) / 12;
-        if (window.innerWidth <= 540) colWidth = (width - 6) / 2;
-        else if (window.innerWidth <= 900) colWidth = (width - 5 * 5) / 6;
-        var tileWidth = colWidth * colSpan + 6 * (colSpan - 1);
-        var tileHeight = tileWidth * (h / w);
-        link.style.gridRowEnd = 'span ' + Math.max(Math.ceil(tileHeight / ROW), 1);
+        var type = classify(w, h);
+        link.className = 'is-' + type;
+        link.style.aspectRatio = w + ' / ' + h;
+        link.setAttribute('data-orient', type);
       }
 
       function shuffleArray(arr) {
         for (var i = arr.length - 1; i > 0; i--) {
           var j = Math.floor(Math.random() * (i + 1));
-          var tmp = arr[i];
+          var t = arr[i];
           arr[i] = arr[j];
-          arr[j] = tmp;
+          arr[j] = t;
         }
         return arr;
       }
@@ -172,12 +155,13 @@
           else tall.push(el);
         });
         shuffleArray(tall);
+        shuffleArray(wide);
         var out = [];
-        var gap = Math.max(3, Math.ceil(tall.length / (wide.length + 1)));
+        var gap = Math.max(4, Math.ceil(tall.length / (wide.length + 1)));
         var ti = 0;
         var wi = 0;
         while (ti < tall.length || wi < wide.length) {
-          if (wi < wide.length && (out.length > 0 && out.length % gap === 0)) {
+          if (wi < wide.length && out.length > 0 && out.length % gap === 0) {
             out.push(wide[wi++]);
           } else if (ti < tall.length) {
             out.push(tall[ti++]);
@@ -188,22 +172,29 @@
         return out;
       }
 
-      function layoutAll() {
-        mosaic.querySelectorAll('a').forEach(function (link) {
+      function whenAllReady(callback) {
+        var links = mosaic.querySelectorAll('a');
+        var pending = links.length;
+        if (!pending) {
+          callback();
+          return;
+        }
+        links.forEach(function (link) {
           var img = link.querySelector('img');
-          if (img.complete && img.naturalWidth) rowSpan(link, img);
-          else img.addEventListener('load', function () { rowSpan(link, img); });
+          function done() {
+            applyOrientation(link, img);
+            pending -= 1;
+            if (pending === 0) callback();
+          }
+          if (img.complete && img.naturalWidth) done();
+          else img.addEventListener('load', done, { once: true });
+          img.addEventListener('error', done, { once: true });
         });
       }
 
-      var items = Array.prototype.slice.call(mosaic.querySelectorAll('a'));
-      interleaveShuffle(items).forEach(function (el) { mosaic.appendChild(el); });
-      layoutAll();
-
-      var resizeTimer;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(layoutAll, 150);
+      whenAllReady(function () {
+        var items = Array.prototype.slice.call(mosaic.querySelectorAll('a'));
+        interleaveShuffle(items).forEach(function (el) { mosaic.appendChild(el); });
       });
 
       mosaic.addEventListener('click', function (event) {
